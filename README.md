@@ -7,8 +7,9 @@ A modern personal portfolio website built with Next.js framework.
 - **Frontend Framework**: Next.js 14
 - **Styling**: Tailwind CSS
 - **Language**: TypeScript
-- **Deployment**: GitHub Actions CI/CD
-- **Hosting**: GitHub Pages
+- **Deployment**: GitHub Actions CI/CD with Docker
+- **Hosting**: On-premises Server
+- **Container**: Docker
 
 ## Key Features
 
@@ -37,14 +38,32 @@ npm start
 
 ## Deployment
 
-This project uses GitHub Webhook for automated deployment:
+This project uses GitHub Webhook for automated deployment to an on-premises server:
 
 1. Deployment is automatically triggered when code is pushed to the `main` branch
 2. GitHub Actions will execute the following steps:
    - Install dependencies
    - Run tests (if any)
-   - Build the project
-   - Deploy to GitHub Pages
+   - Build Docker image
+   - Push Docker image to registry
+   - Deploy to on-premises server using Docker
+
+### GitHub Webhook Setup
+
+The project uses GitHub Webhooks to trigger automatic deployments
+
+Webhook configuration:
+- **Events**: Push events to trigger deployment
+
+## Docker
+
+```bash
+# Build Docker image
+docker build -t portfolio:latest .
+
+# Run Docker container
+docker run -p 3000:3000 portfolio:latest
+```
 
 ## Local Development Setup
 
