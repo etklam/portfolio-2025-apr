@@ -55,7 +55,7 @@ export default function Home() {
           <div className="text-center">
             <div className="animated-text">
               <p className="text-base sm:text-lg">
-                <span className="text-3xl sm:text-4xl">Welcome to My Portfolio</span>
+                <span className="text-3xl sm:text-4xl">Welcome to My Personal Page</span>
               </p>
             </div>
             <div className="max-w-3xl mx-auto px-4">
