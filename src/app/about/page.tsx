@@ -45,7 +45,7 @@ export default function About() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Education</h3>
                 <p className="text-gray-600">
                   Bachelor's Degree in Computer Science<br />
-                  University of Technology<br />
+                  Hong Kong Baptist University<br />
                   2015 - 2019
                 </p>
               </div>
