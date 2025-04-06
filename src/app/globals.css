@@ -24,3 +24,36 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* 動畫文字效果 */
+.animated-text {
+  font: 400 1em/1.5 "Neuton";
+  background: #ffffff;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  margin: 0;
+}
+
+.animated-text p {
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  display: inline-block;
+  border: 4px double rgba(0, 0, 0, 0.8);
+  border-width: 4px 0;
+  padding: 1.5em 0em;
+  position: relative;
+  width: 40em;
+  margin: 0 auto 4em;
+}
+
+.animated-text span {
+  font: 700 4em/1 "Oswald", sans-serif;
+  letter-spacing: 0;
+  padding: .25em 0 .325em;
+  display: block;
+  margin: 0 auto;
+  text-shadow: 0 0 80px rgba(0, 0, 0, 0.5);
+  color: #1a365d;
+  background: none;
+  -webkit-text-fill-color: initial;
+}

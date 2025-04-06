@@ -32,7 +32,11 @@ export default function Home() {
       <div className="min-h-screen bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">Welcome to My Personal Page</h1>
+            <div className="animated-text">
+              <p>
+                <span>Welcome to My Portfolio</span>
+              </p>
+            </div>
             <div className="max-w-3xl mx-auto">
               <p className="text-lg text-gray-600 leading-relaxed mb-12">
                 I am Elliot, A Developer from Hong Kong.
