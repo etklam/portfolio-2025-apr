@@ -12,38 +12,62 @@ export default function Career() {
           <div className="space-y-8">
             {/* Shanghai Commercial Bank Experience */}
             <div className="border-l-4 border-blue-500 pl-6">
-              <h3 className="text-xl font-semibold text-gray-800">Programmer</h3>
+              <h3 className="text-xl font-semibold text-gray-800">Senior Programmer</h3>
               <p className="text-gray-600 mt-2">Shanghai Commercial Bank | Apr 2023 - Present</p>
-              <p className="text-gray-500 mt-1">Team Size: 20+ members</p>
+              <p className="text-gray-500 mt-1">Team Size Around 20+</p>
               <ul className="mt-4 space-y-3 text-gray-700">
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
                   <span>
-                    <strong>Full-Stack Development:</strong> Developed applications using Node.js, React.js, Next.js, and MongoDB, focusing on building Minimum Viable Product (MVP) single-page applications (SPAs) for events
+                    <strong>Core Banking System Revamp:</strong> Migration of a legacy AS400 platform to a modern Spring Boot based system using Java 11, Spring Boot, Vue, MyBatis, and a DB2 database.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
                   <span>
-                    <strong>Client Projects:</strong> Assisted in developing solutions for clients including Oriental Watch Holdings Limited (東方表行) and The Hong Kong Jockey Club
+                    <strong>CI/CD Pipeline Implementation:</strong> Successfully implemented GitLab CI/CD pipelines and configured JBoss application server for DevOps, streamlining development and deployment processes.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
                   <span>
-                    <strong>Internal Tools Development:</strong> Developed internal tools for an insurance company to automate salary calculations
+                    <strong>Batch Program Development and Maintenance:</strong> Developed and maintained batch programs for critical modules including Loans, CASA (Current Account and Savings Account), Forex, Bills, and Time Deposit. These programs were integral to the banking system's functionality.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
                   <span>
-                    <strong>Process Optimization:</strong> Assisted in improving payroll accuracy and processing speed through automated solutions
+                    <strong>Reporting and Transparency Enhancement:</strong> Created comprehensive statements and reports using Jasper Reports, which improved transparency and facilitated better decision-making processes for users.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
                   <span>
-                    <strong>Development Tasks:</strong> Worked on end-to-end development tasks from collecting user requirements to implementation
+                    <strong>System Integration:</strong> Experienced in integrating with other systems using RESTful API and interfaces (binary files for Mainframe), ensuring seamless data exchange and system interoperability.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span>
+                    <strong>Requirements and Communication:</strong> Participated in daily (team), weekly (users), and monthly (high-level) meetings with different parties to collect reviews and requirements.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span>
+                    <strong>Documentation and Planning:</strong> Prepared detailed documents for launch plans, program specifications, and user guides to ensure smooth project execution and user adoption.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span>
+                    <strong>Code Quality Assurance:</strong> Conducted rigorous code reviews and audits using tools like SonarQube, IntelliJ code analysis, and third-party AI tools to maintain high code quality.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span>
+                    <strong>Comprehensive System Assessment:</strong> Executed a broad spectrum of evaluations, including automated unit testing with OpenText, load testing, and security audit to ensure maximum system reliability and performance.
                   </span>
                 </li>
               </ul>
@@ -62,31 +86,31 @@ export default function Career() {
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>
-                      <strong>Framework Development:</strong> Worked on an in-house J2EE framework based on Struts, WebLogic, EJB, Oracle SQL, and Crystal Reports
+                      <strong>Framework Development:</strong> Worked on an in-house J2EE framework based on Struts, WebLogic, EJB, Oracle SQL, and Crystal Reports.
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>
-                      <strong>Module Development:</strong> Developed a new module, TDOP (Taxi Deduction Point System), enhancing system functionality
+                      <strong>Module Development:</strong> Developed a new module, TDOP (Taxi Deduction Point System), enhancing system functionality.
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>
-                      <strong>Testing & Collaboration:</strong> Conducted User Acceptance Testing (UAT) for a new module in collaboration with 7 third-party stakeholders
+                      <strong>Testing & Collaboration:</strong> Conducted User Acceptance Testing (UAT) for a new module in collaboration with 7 third-party stakeholders (Different teams and Departments in government, mainly police force and Judiciary).
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>
-                      <strong>Onsite Support:</strong> Provided onsite support to West Kowloon Government Offices
+                      <strong>Onsite Support:</strong> Provided onsite support to West Kowloon Government Offices.
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>
-                      <strong>Testing:</strong> Conducted various tests including unit test, SIT, UAT, and load tests
+                      <strong>Testing:</strong> Conducted various tests including unit test, SIT, UAT, and load tests.
                     </span>
                   </li>
                 </ul>
@@ -99,37 +123,37 @@ export default function Career() {
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>
-                      <strong>System Maintenance:</strong> Utilized C#, .NET, and MS SQL Server to provide maintenance, enhancements, regular patching, and on-call onsite production support
+                      <strong>System Maintenance:</strong> Utilized C#, .NET, and MS SQL Server to provide maintenance, enhancements, regular patching, and on-call onsite production support.
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>
-                      <strong>Infrastructure Upgrade:</strong> Assisted in coordinating with the infrastructure team for system upgrade process (2008 R2 to 2019)
+                      <strong>Infrastructure Upgrade:</strong> Coordinated with the infrastructure team to plan and execute a staged upgrade process, adhering to Microsoft's recommended path (2008 R2 to 2019).
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>
-                      <strong>Disaster Recovery:</strong> Assisted in reviewing and updating the disaster plan with frontline users
+                      <strong>Disaster Recovery:</strong> Reviewed, updated and practiced the disaster plan with frontline users.
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>
-                      <strong>User Support:</strong> Provided onsite support to Admiralty Offices for User training and on-prem rack support
+                      <strong>User Support:</strong> Provided onsite support to Admiralty Offices for User training and on-prem rack support.
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>
-                      <strong>Documentation & Training:</strong> Assisted in writing user manuals and providing user training
+                      <strong>Documentation & Training:</strong> Wrote user manuals and provided user training.
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>
-                      <strong>Reporting Enhancement:</strong> Worked on enhancing SQL Server Reporting Services (SSRS) functionality as ActiveX controls were phased out
+                      <strong>Reporting Enhancement:</strong> Enhanced SQL Server Reporting Services (SSRS) functionality as ActiveX controls were phased out.
                     </span>
                   </li>
                 </ul>
@@ -139,43 +163,43 @@ export default function Career() {
             {/* FromDB Limited Experience */}
             <div className="border-l-4 border-blue-500 pl-6">
               <h3 className="text-xl font-semibold text-gray-800">Web Developer</h3>
-              <p className="text-gray-600 mt-2">FromDB Limited | Jun 2021 - Oct 2021</p>
+              <p className="text-gray-600 mt-2">FromDB Limited | June 2021 - Oct 2021</p>
               <p className="text-gray-500 mt-1">Summer Internship Program | Team Size: 3 (Start-up)</p>
               <ul className="mt-4 space-y-3 text-gray-700">
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
                   <span>
-                    <strong>Full-Stack Development:</strong> Developed applications using Node.js, React.js, Next.js, and MongoDB, focusing on building Minimum Viable Product (MVP) single-page applications (SPAs) for events
+                    <strong>Full-Stack Development:</strong> Full-stack developer proficient in Node.js, React.js, Next.js, MongoDB, specializing in building Minimum Viable Product (MVP) single-page applications (SPAs) for events.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
                   <span>
-                    <strong>Client Projects:</strong> Assisted in developing solutions for clients including Oriental Watch Holdings Limited (東方表行) and The Hong Kong Jockey Club
+                    <strong>Client Projects:</strong> Developed efficient, scalable solutions for high-profile clients, including Oriental Watch Holdings Limited (東方表行) and The Hong Kong Jockey Club.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
                   <span>
-                    <strong>Internal Tools Development:</strong> Developed internal tools for an insurance company to automate salary calculations
+                    <strong>Internal Tools Development:</strong> Developed internal tools for an insurance company to automate salary calculations, leveraging modern web technologies.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
                   <span>
-                    <strong>Process Optimization:</strong> Assisted in improving payroll accuracy and processing speed through automated solutions
+                    <strong>Process Optimization:</strong> Built efficient solutions to support HR operations, improving payroll accuracy and processing speed.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
                   <span>
-                    <strong>Development Tasks:</strong> Worked on end-to-end development tasks from collecting user requirements to implementation
+                    <strong>Project Management:</strong> Managed projects from collecting user requirements to design and development.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
                   <span>
-                    <strong>Cloud Deployment:</strong> Assisted in deploying applications using AWS Cloud services (Lambda, Lightsail, S3) and Docker
+                    <strong>Cloud Deployment:</strong> Deployment using AWS Cloud services (Lambda, Lightsail, S3) and Docker.
                   </span>
                 </li>
               </ul>
@@ -193,13 +217,13 @@ export default function Career() {
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
                 <span>
-                  <strong>Core Studies:</strong> Computer Science fundamentals, Software Engineering, Database Systems, and Web Development
+                  <strong>Core Studies:</strong> Computer Science fundamentals, Software Engineering, Database Systems, Web Development, Cyber Security, and Artificial Intelligence
                 </span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
                 <span>
-                  <strong>Technical Skills:</strong> Programming languages (Java, Python, C++), Data Structures, Algorithms, and System Design
+                  <strong>Technical Skills:</strong> Programming languages (Java, Python, C++, Node.js), Data Structures, Algorithms, and System Design
                 </span>
               </li>
               <li className="flex items-start">
