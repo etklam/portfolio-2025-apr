@@ -63,7 +63,7 @@ export default function Home() {
                 I am Elliot, A Developer from Hong Kong.
               </p>
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-8 sm:mb-12">
-                Experienced Full Stack Developer with <span className="font-bold text-indigo-600">{experience.years}</span> {experience.years === 1 ? 'year' : 'years'} and <span className="font-bold text-indigo-600">{experience.months}</span> {experience.months === 1 ? 'month' : 'months'} of hands-on development experience
+                Experienced Full Stack Developer with <span className="font-bold text-2xl text-indigo-600">{experience.years}</span> {experience.years === 1 ? 'year' : 'years'} and <span className="font-bold text-2xl text-indigo-600">{experience.months}</span> {experience.months === 1 ? 'month' : 'months'} of hands-on development experience
               </p>
 
               <div className="flex flex-col gap-4 justify-center">
