@@ -32,6 +32,7 @@ body {
   color: rgba(0, 0, 0, 0.8);
   text-align: center;
   margin: 0;
+  padding: 0 1rem;
 }
 
 .animated-text p {
@@ -40,14 +41,15 @@ body {
   display: inline-block;
   border: 4px double rgba(0, 0, 0, 0.8);
   border-width: 4px 0;
-  padding: 1.5em 0em;
+  padding: 1.5em 0;
   position: relative;
-  width: 40em;
+  width: 100%;
+  max-width: 40em;
   margin: 0 auto 4em;
 }
 
 .animated-text span {
-  font: 700 4em/1 "Oswald", sans-serif;
+  font: 700 2em/1 "Oswald", sans-serif;
   letter-spacing: 0;
   padding: .25em 0 .325em;
   display: block;
@@ -56,4 +58,10 @@ body {
   color: #1a365d;
   background: none;
   -webkit-text-fill-color: initial;
+}
+
+@media (min-width: 640px) {
+  .animated-text span {
+    font-size: 4em;
+  }
 }
