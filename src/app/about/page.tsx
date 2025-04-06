@@ -59,9 +59,12 @@ export default function About() {
               </div>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg mb-12">
+            <div className="mt-12">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Expertise</h3>
               <div className="flex flex-wrap justify-center gap-4">
+                <span className="px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full">Plug and Play Developer</span>
+                <span className="px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full">Fast Learner</span>
+                <span className="px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full">Good Communicator</span>
                 <span className="px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full">Backend Development</span>
                 <span className="px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full">Java</span>
                 <span className="px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full">Spring Framework</span>
