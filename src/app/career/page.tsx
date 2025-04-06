@@ -175,7 +175,7 @@ export default function Career() {
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
                   <span>
-                    <strong>Client Projects:</strong> Developed efficient, scalable solutions for high-profile clients, including Oriental Watch Holdings Limited (東方表行) and The Hong Kong Jockey Club.
+                    <strong>Client Projects:</strong> Developed efficient, scalable solutions for high-profile clients, including Well-known companies in Hong Kong.
                   </span>
                 </li>
                 <li className="flex items-start">
