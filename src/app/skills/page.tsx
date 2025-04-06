@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 interface SkillCategory {
   title: string;
@@ -112,6 +113,19 @@ export default function Skills() {
               <h3 className="text-xl font-semibold text-center text-gray-800">{skill}</h3>
             </div>
           ))}
+        </div>
+
+        {/* Career Link */}
+        <div className="mt-12 text-center">
+          <Link
+            href="/career"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+            View My Career Journey
+          </Link>
         </div>
       </div>
     </div>
