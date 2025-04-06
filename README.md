@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website (2025 April)
 
-## Getting Started
+A modern personal portfolio website built with Next.js framework.
 
-First, run the development server:
+## Tech Stack
+
+- **Frontend Framework**: Next.js 14
+- **Styling**: Tailwind CSS
+- **Language**: TypeScript
+- **Deployment**: GitHub Actions CI/CD
+- **Hosting**: GitHub Pages
+
+## Key Features
+
+- Responsive Design
+- Portfolio Showcase
+- Skills Display
+- Career Timeline
+- About Me Page
+- Contact Information
+
+## Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project uses GitHub Webhook for automated deployment:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Deployment is automatically triggered when code is pushed to the `main` branch
+2. GitHub Actions will execute the following steps:
+   - Install dependencies
+   - Run tests (if any)
+   - Build the project
+   - Deploy to GitHub Pages
 
-## Learn More
+## Local Development Setup
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository:
+```bash
+git clone https://github.com/etklam/portfolio-2025-apr.git
+cd portfolio-2025-apr
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Create `.env.local` file and set required environment variables:
+```
+NEXT_PUBLIC_API_URL=your_api_url_here
+```
 
-## Deploy on Vercel
+4. Start development server:
+```bash
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Email: mail@kwunlam.com
+- GitHub: [etklam](https://github.com/etklam/portfolio-2025-apr)
+
+## License
+
+MIT License
