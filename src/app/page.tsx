@@ -13,6 +13,27 @@ interface User {
 export default function Home() {
   const router = useRouter();
   const [user, setUser] = useState<User | null>(null);
+  const [experience, setExperience] = useState({ years: 0, months: 0 });
+
+  useEffect(() => {
+    const startDate = new Date(2022, 5); // June 2022 (month is 0-based)
+    const currentDate = new Date();
+    
+    let years = currentDate.getFullYear() - startDate.getFullYear();
+    let months = currentDate.getMonth() - startDate.getMonth();
+    
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+    
+    // Add 4 months of internship experience
+    const totalMonths = years * 12 + months + 4;
+    const newYears = Math.floor(totalMonths / 12);
+    const newMonths = totalMonths % 12;
+    
+    setExperience({ years: newYears, months: newMonths });
+  }, []);
 
   useEffect(() => {
     const userStr = localStorage.getItem('user');
@@ -34,13 +55,17 @@ export default function Home() {
           <div className="text-center">
             <div className="animated-text">
               <p className="text-base sm:text-lg">
-                <span className="text-3xl sm:text-4xl">Welcome to My Personal Page</span>
+                <span className="text-3xl sm:text-4xl">Welcome to My Portfolio</span>
               </p>
             </div>
             <div className="max-w-3xl mx-auto px-4">
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-8 sm:mb-12">
                 I am Elliot, A Developer from Hong Kong.
               </p>
+              <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-8 sm:mb-12">
+                Experienced Full Stack Developer with <span className="font-bold text-indigo-600">{experience.years}</span> {experience.years === 1 ? 'year' : 'years'} and <span className="font-bold text-indigo-600">{experience.months}</span> {experience.months === 1 ? 'month' : 'months'} of hands-on development experience
+              </p>
+
               <div className="flex flex-col gap-4 justify-center">
                 <Link 
                   href="/about"
