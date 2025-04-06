@@ -34,7 +34,7 @@ export default function Home() {
           <div className="text-center">
             <div className="animated-text">
               <p>
-                <span>Welcome to My Portfolio</span>
+                <span>Welcome to My Personal Page</span>
               </p>
             </div>
             <div className="max-w-3xl mx-auto">
