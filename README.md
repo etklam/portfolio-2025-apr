@@ -1,6 +1,6 @@
 # Portfolio Website (2025 April)
 
-A modern personal portfolio website built with Next.js framework.
+A replacement of the original over engineering personal page, built with Next.js framework.
 
 ## Tech Stack
 
@@ -43,7 +43,7 @@ This project uses GitHub Webhook for automated deployment to an on-premises serv
 1. Deployment is automatically triggered when code is pushed to the `main` branch
 2. GitHub Actions will execute the following steps:
    - Install dependencies
-   - Run tests (if any)
+   - Run tests (no test, yolo :D) 
    - Build Docker image
    - Push Docker image to registry
    - Deploy to on-premises server using Docker
