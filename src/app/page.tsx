@@ -65,6 +65,32 @@ export default function Home() {
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-8 sm:mb-12">
                 Experienced Full Stack Developer with <span className="font-bold text-2xl text-indigo-600">{experience.years}</span> {experience.years === 1 ? 'year' : 'years'} and <span className="font-bold text-2xl text-indigo-600">{experience.months}</span> {experience.months === 1 ? 'month' : 'months'} of hands-on development experience
               </p>
+              <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-8 sm:mb-12">
+                As the point of start of my Geek lifestyle: Domain{' '}
+                <a 
+                  href="https://who.is/whois/kwunlam.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="font-bold text-indigo-600 hover:text-indigo-700 transition-colors"
+                >
+                  kwunlam.com
+                </a>{' '}
+                registered on <span className="font-bold">June 8, 2018</span>, active for{' '}
+                <span className="font-bold text-2xl text-indigo-600">{new Date().getFullYear() - 2018}</span>{' '}
+                {new Date().getFullYear() - 2018 === 1 ? 'year' : 'years'} and{' '}
+                <span className="font-bold text-2xl text-indigo-600">
+                  {(() => {
+                    const currentMonth = new Date().getMonth();
+                    const monthsSinceJune = currentMonth >= 5 ? currentMonth - 5 : currentMonth + 7;
+                    return monthsSinceJune;
+                  })()}
+                </span>{' '}
+                {(() => {
+                  const currentMonth = new Date().getMonth();
+                  const monthsSinceJune = currentMonth >= 5 ? currentMonth - 5 : currentMonth + 7;
+                  return monthsSinceJune === 1 ? 'month' : 'months';
+                })()}.
+              </p>
               <p className="text-base sm:text-lg text-gray-500 italic mb-8 sm:mb-12">
                 * This website is primarily designed for desktop viewing for the best experience, while maintaining full mobile responsiveness.
               </p>
@@ -133,6 +159,32 @@ export default function Home() {
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-8 sm:mb-12">
               Experienced Full Stack Developer with <span className="font-bold text-2xl text-indigo-600">{experience.years}</span> {experience.years === 1 ? 'year' : 'years'} and <span className="font-bold text-2xl text-indigo-600">{experience.months}</span> {experience.months === 1 ? 'month' : 'months'} of hands-on development experience
             </p>
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-8 sm:mb-12">
+              As the point of start of my Geek lifestyle: Domain{' '}
+              <a 
+                href="https://who.is/whois/kwunlam.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="font-bold text-indigo-600 hover:text-indigo-700 transition-colors"
+              >
+                kwunlam.com
+              </a>{' '}
+              registered on <span className="font-bold">June 8, 2018</span>, active for{' '}
+              <span className="font-bold text-2xl text-indigo-600">{new Date().getFullYear() - 2018}</span>{' '}
+              {new Date().getFullYear() - 2018 === 1 ? 'year' : 'years'} and{' '}
+              <span className="font-bold text-2xl text-indigo-600">
+                {(() => {
+                  const currentMonth = new Date().getMonth();
+                  const monthsSinceJune = currentMonth >= 5 ? currentMonth - 5 : currentMonth + 7;
+                  return monthsSinceJune;
+                })()}
+              </span>{' '}
+              {(() => {
+                const currentMonth = new Date().getMonth();
+                const monthsSinceJune = currentMonth >= 5 ? currentMonth - 5 : currentMonth + 7;
+                return monthsSinceJune === 1 ? 'month' : 'months';
+              })()}.
+            </p>
             <p className="text-base sm:text-lg text-gray-500 italic mb-8 sm:mb-12">
               * This website is primarily designed for desktop viewing for the best experience, while maintaining full mobile responsiveness.
             </p>
@@ -174,8 +226,8 @@ export default function Home() {
               >
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-                LinkedIn Profile
+              </svg>
+              LinkedIn Profile
               </a>
             </div>
           </div>
@@ -183,3 +235,4 @@ export default function Home() {
       </div>
     </div>
   );
+}
