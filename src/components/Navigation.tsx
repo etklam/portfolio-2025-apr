@@ -23,8 +23,8 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0 font-mono text-accent-primary text-xl font-bold tracking-wider glitch" data-text="CYBR">
-            CYBR
+          <div className="flex-shrink-0 font-mono text-accent-primary text-xl font-bold tracking-wider glitch" data-text="KLAM">
+            KLAM
           </div>
           
           {/* Desktop Navigation */}
