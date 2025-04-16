@@ -167,6 +167,17 @@ export default function Home() {
                 mail@kwunlam.com
               </a>
               <a
+                href="https://elliot.pages.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center text-lg text-green-600 hover:text-green-700 transition-colors"
+              >
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.5 12a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm-2.5 6a6 6 0 110-12 6 6 0 010 12zm0 2a8 8 0 100-16 8 8 0 000 16z"/>
+                </svg>
+                My Blog
+              </a>
+              <a
                 href="https://www.linkedin.com/in/kwun-lam-chan-43775120a/"
                 target="_blank"
                 rel="noopener noreferrer"

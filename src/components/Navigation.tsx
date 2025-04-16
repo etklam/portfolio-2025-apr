@@ -13,6 +13,7 @@ export default function Navigation() {
     { href: '/about', text: 'About' },
     { href: '/skills', text: 'Skills' },
     { href: '/career', text: 'Career' },
+    { href: 'https://elliot.pages.dev', text: 'Blog' },
   ];
 
   const linkClasses = 'px-3 py-2 rounded-md text-sm font-mono tracking-wider transition-all duration-300 hover:text-accent-primary border border-transparent hover:border-accent-primary relative overflow-hidden group';
@@ -140,4 +141,4 @@ export default function Navigation() {
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-secondary to-transparent"></div>
     </nav>
   );
-} 
+}
