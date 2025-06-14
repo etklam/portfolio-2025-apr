@@ -10,6 +10,11 @@ A replacement of the original over engineering personal page, built with Next.js
 - **Deployment**: GitHub Actions CI/CD with Docker
 - **Hosting**: On-premises Server
 - **Container**: Docker
+## Code Guidelines
+
+- All code comments must be written in English
+- Avoid using non-English characters in source code comments
+- Use clear and concise English to describe functionality
 
 ## Key Features
 

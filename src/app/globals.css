@@ -43,9 +43,10 @@
 }
 
 :root {
-  --foreground-rgb: 255, 255, 0;
-  --background-rgb: 0, 0, 0;
-  --accent-color: 0, 255, 255;
+  --foreground-rgb: 255, 255, 0; /* 黃色文字 */
+  --background-rgb: 0, 0, 0;     /* 黑色背景 */
+  --accent-color: 0, 255, 255;   /* 青色強調色 */
+  --grid-color: rgba(0, 255, 65, 0.05); /* 降低網格不透明度 */
 }
 
 body {
@@ -54,6 +55,8 @@ body {
   font-family: 'Geist', monospace;
   position: relative;
   overflow-x: hidden;
+  font-size: 1rem;       /* 統一文字大小 */
+  line-height: 1.6;      /* 統一文字行高 */
 }
 
 body::before {
@@ -63,13 +66,14 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    linear-gradient(90deg, var(--dark-bg) 21px, transparent 1%) center,
-    linear-gradient(var(--dark-bg) 21px, transparent 1%) center,
-    rgba(0, 255, 65, 0.1);
-  background-size: 22px 22px;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1%) center,
+    linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1%) center,
+    var(--grid-color);
+  background-size: 32px 32px;  /* 增大網格間距 */
   pointer-events: none;
   z-index: -1;
+  opacity: 0.5;  /* 降低網格不透明度 */
 }
 
 a {
@@ -103,7 +107,7 @@ button, .button {
 }
 
 button:hover, .button:hover {
-  color: var(--dark-bg);
+  color: #000; /* 確保文字顏色對比度 */
   border-color: var(--accent-primary);
 }
 
