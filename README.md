@@ -4,7 +4,8 @@ A replacement of the original over engineering personal page, built with Next.js
 
 ## Tech Stack
 
-- **Frontend Framework**: Next.js 14
+- **Frontend Framework**: Next.js 15
+- **React**: 19
 - **Styling**: Tailwind CSS
 - **Language**: TypeScript
 - **Deployment**: GitHub Actions CI/CD with Docker

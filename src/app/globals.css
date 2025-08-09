@@ -45,8 +45,12 @@
 :root {
   --foreground-rgb: 255, 255, 0; /* 黃色文字 */
   --background-rgb: 0, 0, 0;     /* 黑色背景 */
-  --accent-color: 0, 255, 255;   /* 青色強調色 */
   --grid-color: rgba(0, 255, 65, 0.05); /* 降低網格不透明度 */
+  /* Accent palette (align with tailwind.config.js) */
+  --accent-primary: #ff00ff;
+  --accent-secondary: #00ffff;
+  --accent-tertiary: #ffff00;
+  --foreground: #00ff41; /* for components referencing var(--foreground) */
 }
 
 body {

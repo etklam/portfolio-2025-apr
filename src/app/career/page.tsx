@@ -1,5 +1,3 @@
-'use client';
-
 export default function Career() {
   return (
     <div className="min-h-screen bg-black py-12">

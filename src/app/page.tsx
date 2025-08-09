@@ -1,18 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
-interface User {
-  id: number;
-  email: string;
-  name: string;
-}
-
 export default function Home() {
-  const router = useRouter();
-  const [user, setUser] = useState<User | null>(null);
   const [workExperience, setWorkExperience] = useState({ years: 0, months: 0 });
   const [internshipExperience, setInternshipExperience] = useState({ years: 0, months: 0 });
   // 靜態文字取代打字機效果
@@ -37,19 +28,6 @@ export default function Home() {
     setInternshipExperience({ years: 0, months: 4 });
   }, []);
 
-
-  useEffect(() => {
-    const userStr = localStorage.getItem('user');
-    if (userStr) {
-      setUser(JSON.parse(userStr));
-    }
-  }, []);
-
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
-    router.push('/login');
-  };
 
   const renderMainContent = () => (
     <div className="relative min-h-screen bg-black overflow-hidden">
@@ -160,10 +138,6 @@ export default function Home() {
       </div>
     </div>
   );
-
-  if (!user) {
-    return renderMainContent();
-  }
 
   return renderMainContent();
 }
