@@ -1,16 +1,17 @@
 import type { MetadataRoute } from 'next';
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+const locales = ['zh-HK', 'en'];
+const routes = ['', '/about', '/skills', '/career', '/status'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  return [
-    { url: `${baseUrl}/`, lastModified: now, changeFrequency: 'weekly', priority: 1 },
-    { url: `${baseUrl}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/skills`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/career`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/status`, lastModified: now, changeFrequency: 'daily', priority: 0.5 },
-  ];
+  return locales.flatMap((locale) =>
+    routes.map((route) => ({
+      url: `${baseUrl}/${locale}${route}`,
+      lastModified: now,
+      changeFrequency: route === '' ? 'weekly' : 'monthly',
+      priority: route === '' ? 1 : 0.7,
+    })),
+  );
 }
-
-

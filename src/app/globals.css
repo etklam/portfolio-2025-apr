@@ -4,421 +4,58 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .cyber-card {
-    @apply relative overflow-hidden;
-    background-color: #000000;
-    color: #FFFF00;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-    clip-path: polygon(
-      0 10px, 
-      10px 0, 
-      calc(100% - 10px) 0, 
-      100% 10px, 
-      100% calc(100% - 10px), 
-      calc(100% - 10px) 100%, 
-      10px 100%, 
-      0 calc(100% - 10px)
-    );
-    border: 1px solid #00FFFF;
-  }
-
-  .neon-text {
-    color: #FFFF00;
-    text-shadow: 0 0 5px #FFFF00, 0 0 10px #FFFF00, 0 0 15px #FFFF00;
-    animation: neon-pulse 2s infinite;
-  }
-}
-
-@keyframes neon-pulse {
-  0% {
-    text-shadow: 0 0 5px #FFFF00, 0 0 10px #FFFF00, 0 0 15px #FFFF00;
-  }
-  50% {
-    text-shadow: 0 0 10px #FFFF00, 0 0 20px #FFFF00, 0 0 30px #FFFF00;
-  }
-  100% {
-    text-shadow: 0 0 5px #FFFF00, 0 0 10px #FFFF00, 0 0 15px #FFFF00;
-  }
-}
-
 :root {
-  --foreground-rgb: 255, 255, 0; /* 黃色文字 */
-  --background-rgb: 0, 0, 0;     /* 黑色背景 */
-  --grid-color: rgba(0, 255, 65, 0.05); /* 降低網格不透明度 */
-  /* Accent palette (align with tailwind.config.js) */
-  --accent-primary: #ff00ff;
-  --accent-secondary: #00ffff;
-  --accent-tertiary: #ffff00;
-  --foreground: #00ff41; /* for components referencing var(--foreground) */
+  --bg-0: #05080f;
+  --bg-1: #0d1323;
+  --line: rgba(184, 205, 255, 0.2);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
-  font-family: 'Geist', monospace;
-  position: relative;
-  overflow-x: hidden;
-  font-size: 1rem;       /* 統一文字大小 */
-  line-height: 1.6;      /* 統一文字行高 */
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1%) center,
-    linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1%) center,
-    var(--grid-color);
-  background-size: 32px 32px;  /* 增大網格間距 */
-  pointer-events: none;
-  z-index: -1;
-  opacity: 0.5;  /* 降低網格不透明度 */
-}
-
-a {
-  color: var(--accent-secondary);
-  text-shadow: var(--cyberpunk-glow) var(--accent-secondary);
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  color: var(--accent-primary);
-  text-shadow: var(--cyberpunk-glow) var(--accent-primary);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: var(--accent-primary);
-  text-shadow: var(--cyberpunk-glow) var(--accent-primary);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-button, .button {
-  background: transparent;
-  color: var(--accent-secondary);
-  border: 1px solid var(--accent-secondary);
-  padding: 0.5rem 1rem;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s;
-  z-index: 1;
-}
-
-button:hover, .button:hover {
-  color: #000; /* 確保文字顏色對比度 */
-  border-color: var(--accent-primary);
-}
-
-button:hover::before, .button:hover::before {
-  transform: scaleX(1);
-}
-
-button::before, .button::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--accent-primary);
-  z-index: -1;
-  transform: scaleX(0);
-  transform-origin: 0 50%;
-  transition: transform 0.3s ease-out;
-}
-
-code {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--accent-tertiary);
-  padding: 0.2em 0.4em;
-  border-radius: 3px;
-  font-family: var(--font-mono);
-}
-
-/* 動畫文字效果 */
-.animated-text {
-  font: 400 1em/1.5 "Neuton";
-  background: transparent;
-  color: var(--foreground);
-  text-align: center;
   margin: 0;
-  padding: 0 1rem;
+  min-height: 100vh;
+  color: #f8fafc;
+  font-family: var(--font-space-grotesk), var(--font-noto-sans-tc), sans-serif;
+  background:
+    radial-gradient(1200px 600px at 15% -10%, rgba(25, 137, 249, 0.3), transparent 60%),
+    radial-gradient(1000px 600px at 90% 5%, rgba(56, 189, 248, 0.15), transparent 55%),
+    linear-gradient(180deg, var(--bg-1) 0%, var(--bg-0) 100%);
 }
 
-.animated-text p {
-  text-transform: uppercase;
-  letter-spacing: .5em;
-  display: inline-block;
-  border: 4px double var(--accent-secondary);
-  border-width: 4px 0;
-  padding: 1.5em 0;
-  position: relative;
-  width: 100%;
-  max-width: 40em;
-  margin: 0 auto 4em;
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 42px 42px;
+  opacity: 0.12;
+  z-index: -1;
 }
 
-.animated-text span {
-  font: 700 2em/1 "Oswald", sans-serif;
-  letter-spacing: 0;
-  padding: .25em 0 .325em;
-  display: block;
-  margin: 0 auto;
-  text-shadow: 0 0 10px var(--accent-secondary);
-  color: var(--accent-primary);
-  background: none;
-  -webkit-text-fill-color: initial;
-}
+@layer components {
+  .surface-card {
+    @apply rounded-2xl border border-white/10 bg-slate-950/45 backdrop-blur-sm;
+  }
 
-@media (min-width: 640px) {
-  .animated-text span {
-    font-size: 4em;
+  .chip {
+    @apply rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-200;
   }
-}
 
-/* Cyberpunk glitch effect */
-.glitch {
-  position: relative;
-  color: var(--accent-primary);
-  animation: glitch-skew 4s infinite linear alternate-reverse;
-}
-
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.glitch::before {
-  left: 2px;
-  text-shadow: -2px 0 var(--accent-secondary);
-  clip: rect(44px, 450px, 56px, 0);
-  animation: glitch-anim 5s infinite linear alternate-reverse;
-}
-
-.glitch::after {
-  left: -2px;
-  text-shadow: -2px 0 var(--accent-tertiary);
-  clip: rect(44px, 450px, 56px, 0);
-  animation: glitch-anim2 5s infinite linear alternate-reverse;
-}
-
-@keyframes glitch-anim {
-  0% {
-    clip: rect(16px, 9999px, 94px, 0);
-    transform: skew(0.65deg);
-  }
-  5% {
-    clip: rect(22px, 9999px, 59px, 0);
-    transform: skew(0.45deg);
-  }
-  10% {
-    clip: rect(98px, 9999px, 36px, 0);
-    transform: skew(0.5deg);
-  }
-  15% {
-    clip: rect(87px, 9999px, 14px, 0);
-    transform: skew(0.19deg);
-  }
-  20% {
-    clip: rect(29px, 9999px, 16px, 0);
-    transform: skew(0.88deg);
-  }
-  25% {
-    clip: rect(10px, 9999px, 3px, 0);
-    transform: skew(0.02deg);
-  }
-  30% {
-    clip: rect(4px, 9999px, 15px, 0);
-    transform: skew(0.07deg);
-  }
-  35% {
-    clip: rect(89px, 9999px, 8px, 0);
-    transform: skew(0.1deg);
-  }
-  40% {
-    clip: rect(33px, 9999px, 36px, 0);
-    transform: skew(0.41deg);
-  }
-  45% {
-    clip: rect(100px, 9999px, 35px, 0);
-    transform: skew(0.74deg);
-  }
-  50% {
-    clip: rect(82px, 9999px, 59px, 0);
-    transform: skew(0.98deg);
-  }
-  55% {
-    clip: rect(21px, 9999px, 23px, 0);
-    transform: skew(0.15deg);
-  }
-  60% {
-    clip: rect(51px, 9999px, 44px, 0);
-    transform: skew(0.2deg);
-  }
-  65% {
-    clip: rect(8px, 9999px, 37px, 0);
-    transform: skew(0.7deg);
-  }
-  70% {
-    clip: rect(38px, 9999px, 81px, 0);
-    transform: skew(0.94deg);
-  }
-  75% {
-    clip: rect(45px, 9999px, 34px, 0);
-    transform: skew(0.29deg);
-  }
-  80% {
-    clip: rect(76px, 9999px, 2px, 0);
-    transform: skew(0.73deg);
-  }
-  85% {
-    clip: rect(42px, 9999px, 69px, 0);
-    transform: skew(0.85deg);
-  }
-  90% {
-    clip: rect(45px, 9999px, 95px, 0);
-    transform: skew(0.2deg);
-  }
-  95% {
-    clip: rect(17px, 9999px, 44px, 0);
-    transform: skew(0.39deg);
-  }
-  100% {
-    clip: rect(65px, 9999px, 37px, 0);
-    transform: skew(0.08deg);
+  .section-title {
+    @apply text-3xl font-semibold text-white sm:text-4xl;
   }
 }
 
-@keyframes glitch-anim2 {
-  0% {
-    clip: rect(86px, 9999px, 59px, 0);
-    transform: skew(0.07deg);
-  }
-  5% {
-    clip: rect(41px, 9999px, 41px, 0);
-    transform: skew(0.06deg);
-  }
-  10% {
-    clip: rect(3px, 9999px, 33px, 0);
-    transform: skew(0.12deg);
-  }
-  15% {
-    clip: rect(19px, 9999px, 4px, 0);
-    transform: skew(0.05deg);
-  }
-  20% {
-    clip: rect(7px, 9999px, 81px, 0);
-    transform: skew(0.37deg);
-  }
-  25% {
-    clip: rect(83px, 9999px, 36px, 0);
-    transform: skew(0.71deg);
-  }
-  30% {
-    clip: rect(11px, 9999px, 15px, 0);
-    transform: skew(0.68deg);
-  }
-  35% {
-    clip: rect(25px, 9999px, 63px, 0);
-    transform: skew(0.19deg);
-  }
-  40% {
-    clip: rect(3px, 9999px, 10px, 0);
-    transform: skew(0.71deg);
-  }
-  45% {
-    clip: rect(78px, 9999px, 12px, 0);
-    transform: skew(0.53deg);
-  }
-  50% {
-    clip: rect(98px, 9999px, 43px, 0);
-    transform: skew(0.06deg);
-  }
-  55% {
-    clip: rect(36px, 9999px, 66px, 0);
-    transform: skew(0.33deg);
-  }
-  60% {
-    clip: rect(72px, 9999px, 47px, 0);
-    transform: skew(0.67deg);
-  }
-  65% {
-    clip: rect(35px, 9999px, 39px, 0);
-    transform: skew(0.97deg);
-  }
-  70% {
-    clip: rect(84px, 9999px, 4px, 0);
-    transform: skew(0.28deg);
-  }
-  75% {
-    clip: rect(14px, 9999px, 15px, 0);
-    transform: skew(0.13deg);
-  }
-  80% {
-    clip: rect(98px, 9999px, 100px, 0);
-    transform: skew(0.98deg);
-  }
-  85% {
-    clip: rect(1px, 9999px, 97px, 0);
-    transform: skew(0.85deg);
-  }
-  90% {
-    clip: rect(33px, 9999px, 59px, 0);
-    transform: skew(0.13deg);
-  }
-  95% {
-    clip: rect(1px, 9999px, 12px, 0);
-    transform: skew(0.64deg);
-  }
-  100% {
-    clip: rect(31px, 9999px, 16px, 0);
-    transform: skew(0.29deg);
-  }
-}
-
-@keyframes glitch-skew {
-  0% {
-    transform: skew(1deg);
-  }
-  10% {
-    transform: skew(-1deg);
-  }
-  20% {
-    transform: skew(0deg);
-  }
-  30% {
-    transform: skew(3deg);
-  }
-  40% {
-    transform: skew(-1deg);
-  }
-  50% {
-    transform: skew(2deg);
-  }
-  60% {
-    transform: skew(0deg);
-  }
-  70% {
-    transform: skew(-3deg);
-  }
-  80% {
-    transform: skew(-1deg);
-  }
-  90% {
-    transform: skew(4deg);
-  }
-  100% {
-    transform: skew(0deg);
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }

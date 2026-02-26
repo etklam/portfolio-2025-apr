@@ -39,3 +39,22 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# turbo
+.turbo
+
+# eslint
+.eslintcache
+
+# ide
+.vscode/
+.idea/
+
+# claude
+.claude/
+
+# os
+Thumbs.db
+
+# codex local tooling
+.codex/

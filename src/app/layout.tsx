@@ -1,22 +1,23 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import type { Metadata } from 'next';
+import { Noto_Sans_TC, Space_Grotesk } from 'next/font/google';
+import './globals.css';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const spaceGrotesk = Space_Grotesk({
+  variable: '--font-space-grotesk',
+  subsets: ['latin'],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const notoSansTC = Noto_Sans_TC({
+  variable: '--font-noto-sans-tc',
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
 });
 
 export const metadata: Metadata = {
-  title: "Elliot's Personal Page",
-  description: 'Personal portfolio website of Elliot Chan',
+  title: "Elliot Chan | Full-Stack Engineer",
+  description: 'Bilingual portfolio with a modern technology-focused design.',
 };
 
 export default function RootLayout({
@@ -25,14 +26,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="zh-HK">
+      <body className={`${spaceGrotesk.variable} ${notoSansTC.variable} antialiased`}>
         <Navigation />
-        <main className="min-h-screen">
-          {children}
-        </main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
