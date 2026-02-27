@@ -27,10 +27,9 @@ export default function Navigation() {
 
   const links = [
     { href: '/', label: t.nav.home },
-    { href: '/about', label: t.nav.about },
-    { href: '/skills', label: t.nav.skills },
+    { href: '/#about', label: t.nav.about },
+    { href: '/#skills', label: t.nav.skills },
     { href: '/career', label: t.nav.career },
-    { href: '/status', label: t.nav.status },
   ];
 
   return (
@@ -43,7 +42,8 @@ export default function Navigation() {
         <div className="mx-3 flex flex-1 items-center gap-1 overflow-x-auto md:mx-0 md:flex-none md:gap-2">
           {links.map((link) => {
             const localizedHref = withLocale(locale, link.href);
-            const isActive = pathname === localizedHref || (localizedHref.endsWith('/') && pathname === localizedHref.slice(0, -1));
+            const isHashLink = link.href.includes('#');
+            const isActive = link.href === '/' ? currentPath === '/' : !isHashLink && currentPath === link.href;
 
             return (
               <Link

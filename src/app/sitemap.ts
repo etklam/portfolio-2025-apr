@@ -1,8 +1,9 @@
 import type { MetadataRoute } from 'next';
+import { getSiteUrl } from '@/lib/site-url';
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+const baseUrl = getSiteUrl();
 const locales = ['zh-HK', 'en'];
-const routes = ['', '/about', '/skills', '/career', '/status'];
+const routes = ['', '/about', '/skills', '/career'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

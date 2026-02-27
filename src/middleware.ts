@@ -14,12 +14,16 @@ export function middleware(request: NextRequest) {
 
   const firstSegment = pathname.split('/')[1];
   if (isLocale(firstSegment)) {
-    return NextResponse.next();
+    const response = NextResponse.next();
+    response.cookies.set('locale', firstSegment, { path: '/', sameSite: 'lax' });
+    return response;
   }
 
   const url = request.nextUrl.clone();
   url.pathname = `/${defaultLocale}${pathname === '/' ? '' : pathname}`;
-  return NextResponse.redirect(url);
+  const response = NextResponse.redirect(url);
+  response.cookies.set('locale', defaultLocale, { path: '/', sameSite: 'lax' });
+  return response;
 }
 
 export const config = {
