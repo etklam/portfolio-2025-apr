@@ -1,36 +1,43 @@
-# 構建階段
-FROM node:20-alpine AS builder
+FROM node:20-alpine AS base
 
-# 設置工作目錄
+# Install dependencies only when needed
+FROM base AS deps
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# 複製 package.json 和 package-lock.json
-COPY package*.json ./
+COPY package.json package-lock.json* ./
+RUN npm ci --prefer-offline --no-audit
 
-# 安裝依賴
-RUN npm ci
-
-# 複製其餘源代碼
+# Rebuild the source code only when needed
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# 構建應用
+# Disable telemetry during build
+ENV NEXT_TELEMETRY_DISABLED 1
+
 RUN npm run build
 
-# 生產階段
-FROM node:20-alpine AS runner
-
+# Production image, copy all the files and run next
+FROM base AS runner
 WORKDIR /app
 
-# 設置環境變量
-ENV NODE_ENV=production
+ENV NODE_ENV production
+ENV NEXT_TELEMETRY_DISABLED 1
 
-# 只複製必要的文件
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/.next/static ./.next/static
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
-# 暴露端口
+USER nextjs
+
 EXPOSE 3000
 
-# 啟動應用
-CMD ["node", "server.js"] 
+ENV PORT 3000
+ENV HOSTNAME "0.0.0.0"
+
+CMD ["node", "server.js"]

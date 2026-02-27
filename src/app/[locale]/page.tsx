@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getMessages, isLocale, withLocale } from '@/i18n/content';
 
+const categoryOrder = ['backend', 'frontend', 'devops'] as const;
+
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
 
@@ -13,7 +15,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   return (
     <div className="relative isolate overflow-hidden px-4 pb-20 pt-10 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl space-y-8">
         <section className="rounded-3xl border border-white/15 bg-white/5 p-8 backdrop-blur-xl sm:p-12">
           <p className="mb-4 inline-flex rounded-full border border-cyan-300/40 bg-cyan-300/10 px-4 py-1 text-sm text-cyan-100">
             {t.hero.badge}
@@ -43,6 +45,42 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 <p className="mt-1 text-sm text-slate-300">{item.label}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section id="about" className="scroll-mt-24">
+          <h2 className="section-title">{t.about.title}</h2>
+          <div className="mt-8 space-y-5">
+            <p className="rounded-2xl border border-white/10 bg-white/5 p-6 text-slate-200">{t.about.summary}</p>
+            <div className="grid gap-5 md:grid-cols-2">
+              {t.about.cards.map((card) => (
+                <article key={card.title} className="surface-card p-6">
+                  <h3 className="text-xl font-semibold text-white">{card.title}</h3>
+                  <p className="mt-3 text-slate-300">{card.body}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="skills" className="scroll-mt-24">
+          <h2 className="section-title">{t.skills.title}</h2>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {categoryOrder.map((key) => {
+              const category = t.skills.categories[key];
+              return (
+                <section key={key} className="surface-card p-6">
+                  <h3 className="text-lg font-semibold text-cyan-100">{category.title}</h3>
+                  <ul className="mt-4 space-y-2">
+                    {category.items.map((skill) => (
+                      <li key={skill} className="chip">
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              );
+            })}
           </div>
         </section>
       </div>

@@ -1,30 +1,34 @@
 # Portfolio
 
-A personal portfolio website built with modern web technologies.
+A bilingual personal portfolio built with Next.js App Router.
 
 ## Tech Stack
 
-- **Next.js 15.2.4** - React framework with App Router
-- **React 19** - UI library
-- **TypeScript 5** - Type-safe JavaScript
-- **Tailwind CSS 4** - Utility-first CSS framework
-- **Turbopack** - Fast bundler for development
+- Next.js 15.2.4
+- React 19
+- TypeScript 5
+- Tailwind CSS 4
 
-## Pages
+## Routes
 
-- `/` - Home page
-- `/about` - About me
-- `/career` - Career journey
-- `/skills` - Skills overview
-- `/status` - Current status
+- `/{locale}`: home page (includes About + Skills sections)
+- `/{locale}/career`: career page
+- `/{locale}/about` -> redirects to `/{locale}/#about`
+- `/{locale}/skills` -> redirects to `/{locale}/#skills`
+- `/{locale}/status` -> redirects to `/{locale}`
 
-## Development
+Supported locales:
+
+- `zh-HK` (default)
+- `en`
+
+## Local Development
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open `http://localhost:3000`.
 
 ## Build
 
@@ -33,8 +37,13 @@ npm run build
 npm start
 ```
 
-## Lint
+## Test
 
 ```bash
-npm run lint
+npm test
 ```
+
+## Deployment Guides
+
+- CapRover: `deploy.md`
+- Cloudflare Pages: `docs/deploy-cloudflare-pages.md`

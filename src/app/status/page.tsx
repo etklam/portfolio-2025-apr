@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation';
 
 export default function StatusRedirect() {
-  redirect('/zh-HK/status');
+  redirect('/zh-HK');
 }
